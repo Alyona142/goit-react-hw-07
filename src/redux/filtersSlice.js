@@ -9,13 +9,18 @@ const filtersSlice = createSlice({
     setNameFilter(state, action) {
       state.name = action.payload;
     },
+    changeFilter(state, action) {
+      // Реалізація changeFilter, якщо це потрібно
+      state.name = action.payload;
+    },
   },
 });
 
-export const { setNameFilter } = filtersSlice.actions;
+// Експорт дій
+export const { setNameFilter, changeFilter } = filtersSlice.actions;
 
-export const { changeFilter } = filtersSlice.actions;
-
+// Селектор для отримання значення фільтра
 export const selectNameFilter = (state) => state.filters.name;
 
+// Експорт редюсера
 export const filtersReducer = filtersSlice.reducer;
