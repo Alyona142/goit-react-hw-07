@@ -2,9 +2,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import s from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+
 // import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
+
+import { addContact } from "../../redux/contactsOps";
 
 const ContactSchema = Yup.object().shape({
   username: Yup.string()
